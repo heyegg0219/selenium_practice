@@ -14,12 +14,10 @@ chrome.get(
     "https://www.104.com.tw/jobs/search/?ro=0&keyword=Python&expansionType=area%2Cspec%2Ccom%2Cjob%2Cwf%2Cwktm&area"
     "=6001001001%2C6001001003%2C6001005001%2C6001005002&order=3&asc=1&page=1&mode=s&jobsource=2018indexpoc&langFlag=0"
     "&langStatus=0&recommendJob=1&hotJob=1")
-<<<<<<< HEAD
 
-=======
-#
->>>>>>> dca1d1ffe46a32cd878dc2fa76f4ac7fbe61b8b9
+
 for x in range(1, 16):  # 執行滾動捲軸15次，每滾動一次就暫停執行程式碼0.5秒
+    print(f'\r爬取進度:{x * 100 / 15:.1f}%', end='')
     chrome.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     time.sleep(0.5)
 
